@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Sabor Interiorano</title>
+    <!-- Incluye Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importa la fuente Inter de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Un fondo gris claro para la página */
+        }
+        /* Estilo para los títulos de sección con un icono */
+        .section-title {
+            position: relative;
+            padding-left: 2.5rem; /* Espacio para el icono */
+            color: #1a202c; /* Color de texto oscuro */
+        }
+        .section-title::before {
+            content: '📌'; /* Un icono de chincheta para destacar la sección */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            color: #ef4444; /* Rojo de Tailwind para el icono */
+        }
+        /* Estilos para las etiquetas de estado */
+        .status-badge {
+            padding: 0.3rem 0.9rem;
+            border-radius: 9999px; /* Completamente redondeado */
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block; /* Para que ocupe solo el espacio necesario */
+            margin-bottom: 1rem; /* Espacio debajo de la etiqueta */
+        }
+        /* Colores específicos para cada estado */
+        .status-aprobado {
+            background-color: #d1fae5; /* Verde claro */
+            color: #065f46; /* Verde oscuro */
+        }
+        .status-completo {
+            background-color: #dbeafe; /* Azul claro */
+            color: #1e40af; /* Azul oscuro */
+        }
+        .status-definido {
+            background-color: #ffedd5; /* Naranja claro */
+            color: #ea580c; /* Naranja oscuro */
+        }
+        .status-trazado {
+            background-color: #fee2e2; /* Rojo claro */
+            color: #dc2626; /* Rojo oscuro */
+        }
+        .status-investigado {
+            background-color: #e0f2fe; /* Azul muy claro */
+            color: #2563eb; /* Azul brillante */
+        }
+        .status-identificado {
+            background-color: #f3e8ff; /* Púrpura claro */
+            color: #9333ea; /* Púrpura oscuro */
+        }
+        .status-planificado {
+            background-color: #fef08a; /* Amarillo claro */
+            color: #b45309; /* Marrón-naranja oscuro */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4 sm:p-8 lg:p-12 max-w-4xl">
+        <!-- Encabezado de la página -->
+        <header class="bg-red-600 text-white p-8 rounded-xl shadow-2xl mb-10 transform hover:scale-105 transition duration-300 ease-in-out">
+            <h1 class="text-5xl font-extrabold text-center mb-3 drop-shadow-lg">Proyecto Sabor Interiorano</h1>
+            <p class="text-2xl text-center font-light leading-snug">Conectando el Corazón Culinario de Panamá con la Ciudad</p>
+        </header>
+
+        <!-- Contenedor principal de módulos con un diseño de una sola columna -->
+        <main class="grid grid-cols-1 gap-8">
+
+            <!-- Módulo 1: Identificación del Proyecto -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-red-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Identificación del Proyecto</h2>
+                <span class="status-badge status-aprobado">Estado: Aprobado</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-red-700">Título del Proyecto:</h3>
+                <p class="text-lg font-medium text-gray-700 leading-relaxed">"Sabor Interiorano: Conectando el Corazón Culinario de Panamá con la Ciudad"</p>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-red-700">Idea de Negocio:</h3>
+                <p class="text-gray-600 leading-relaxed">Desarrollar una plataforma web y móvil (Web App) que funcione como una red de distribución digital. Esta plataforma conectará a productores artesanales de alimentos tradicionales del interior de Panamá (dulces, panes, quesos, etc.) con consumidores en las principales zonas urbanas del país, facilitando la logística, el marketing y las ventas.</p>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-red-700">Descripción del Proyecto:</h3>
+                <p class="text-gray-600 leading-relaxed">El proyecto consiste en la creación de una solución tecnológica integral que incluye un mercado en línea (marketplace) para que los productores listen sus productos, un sistema de gestión de pedidos, una pasarela de pagos segura y una red logística coordinada para la recolección en el interior y la entrega en la ciudad. La plataforma fortalecerá la presencia digital de los productores y aumentará sus ventas de manera significativa.</p>
+            </section>
+
+            <!-- Módulo 2: Contexto y Justificación -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-blue-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Contexto y Justificación</h2>
+                <span class="status-badge status-completo">Estado: Completo</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-blue-700">Antecedentes:</h3>
+                <ul class="list-disc list-inside text-gray-600 leading-relaxed space-y-2">
+                    <li><span class="font-semibold">Crecimiento del E-commerce:</span> La penetración de las compras en línea en Panamá ha crecido exponencialmente, acelerada por cambios en el comportamiento del consumidor que ahora valora la conveniencia y el acceso a productos únicos desde casa.</li>
+                    <li><span class="font-semibold">Valorización de lo Autóctono:</span> Existe una creciente tendencia en los mercados urbanos de valorar los productos locales, artesanales y con historia, en contraposición a los productos masificados.</li>
+                    <li><span class="font-semibold">Brecha Digital y Logística:</span> Los pequeños productores del interior carecen de las herramientas digitales y la capacidad logística para alcanzar los mercados más lucrativos de la ciudad, limitando su potencial de crecimiento.</li>
+                </ul>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-blue-700">Planteamiento del Problema:</h3>
+                <p class="text-gray-600 leading-relaxed">Los productores artesanales de alimentos tradicionales del interior de Panamá enfrentan barreras significativas para acceder a los mercados urbanos, como la falta de canales de venta directa, altos costos de distribución individual y escasa visibilidad digital. Esto resulta en una pérdida de oportunidades económicas y un riesgo para la continuidad de estas tradiciones culinarias. "Sabor Interiorano" busca resolver este problema creando un puente digital y logístico eficiente.</p>
+            </section>
+
+            <!-- Módulo 3: Direccionamiento Estratégico -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-orange-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Direccionamiento Estratégico</h2>
+                <span class="status-badge status-definido">Estado: Definido</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-orange-700">Misión del Proyecto:</h3>
+                <p class="text-gray-600 leading-relaxed">Empoderar a los productores artesanales de Panamá, brindándoles una plataforma tecnológica innovadora que lleve sus productos tradicionales a todos los hogares urbanos del país, fomentando el comercio justo, el desarrollo económico local y la preservación de nuestra herencia culinaria.</p>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-orange-700">Visión del Proyecto:</h3>
+                <p class="text-gray-600 leading-relaxed">Ser la plataforma digital líder y de referencia en Panamá para la compra y distribución de productos alimenticios tradicionales, reconocida por nuestra calidad, autenticidad y el impacto positivo en las comunidades del interior del país.</p>
+            </section>
+
+            <!-- Módulo 4: Objetivos del Proyecto -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-purple-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Objetivos del Proyecto</h2>
+                <span class="status-badge status-trazado">Estado: Trazado</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-purple-700">Objetivo General:</h3>
+                <p class="text-gray-600 leading-relaxed">Desarrollar y lanzar en un plazo de 12 meses la plataforma "Sabor Interiorano", estableciendo una red de distribución digital funcional que incremente en al menos un 30% los ingresos de los productores afiliados durante el primer año de operación.</p>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-purple-700">Objetivos Específicos:</h3>
+                <ul class="list-disc list-inside text-gray-600 leading-relaxed space-y-2">
+                    <li><span class="font-semibold">Desarrollo Tecnológico:</span> Implementar la plataforma web app con funcionalidades de e-commerce, perfiles de productor y sistema de pedidos en un plazo de 6 meses.</li>
+                    <li><span class="font-semibold">Red de Productores:</span> Afiliar a un mínimo de 30 productores verificados de 4 provincias distintas antes del lanzamiento oficial.</li>
+                    <li><span class="font-semibold">Logística:</span> Establecer 2 centros de consolidación (hubs) en puntos estratégicos del interior y una red de entrega de "última milla" en la Ciudad de Panamá y Panamá Oeste.</li>
+                    <li><span class="font-semibold">Captación de Clientes:</span> Alcanzar una base de 1,500 usuarios registrados y procesar 1,000 pedidos en los primeros 3 meses post-lanzamiento.</li>
+                    <li><span class="font-semibold">Medición y Análisis:</span> Implementar un dashboard para monitorear en tiempo real las ventas, la satisfacción del cliente y el impacto en los ingresos de los productores.</li>
+                </ul>
+            </section>
+
+            <!-- Módulo 5: Análisis del Entorno -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-green-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Análisis del Entorno</h2>
+                <span class="status-badge status-investigado">Estado: Investigado</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-green-700">Evolución Macroeconómica:</h3>
+                <p class="text-gray-600 leading-relaxed">La economía panameña, con un fuerte pilar en el sector servicios y logística, presenta un entorno favorable. El crecimiento del poder adquisitivo en zonas urbanas y la inversión en infraestructura digital y vial del país apoyan la viabilidad del proyecto.</p>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-green-700">Evolución del Sector (Alimentos y Tecnología):</h3>
+                <ul class="list-disc list-inside text-gray-600 leading-relaxed space-y-2">
+                    <li><span class="font-semibold">Demanda Creciente:</span> Hay un marcado interés por la alimentación saludable, los productos orgánicos y de origen conocido, impulsado por una mayor conciencia sobre la salud.</li>
+                    <li><span class="font-semibold">Innovación Tecnológica:</span> La adopción de apps de delivery y marketplaces ha educado al mercado, creando una base de usuarios familiarizada con las compras digitales de alimentos.</li>
+                    <li><span class="font-semibold">Sostenibilidad:</span> Los consumidores modernos valoran las prácticas de comercio justo y el apoyo a las economías locales, lo que representa una ventaja competitiva clave para "Sabor Interiorano".</li>
+                </ul>
+            </section>
+
+            <!-- Módulo 6: Marco Regulatorio -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-yellow-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Marco Regulatorio</h2>
+                <span class="status-badge status-identificado">Estado: Identificado</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-yellow-700">Legislación Vinculada al Proyecto:</h3>
+                <p class="text-gray-600 leading-relaxed">El proyecto deberá operar en cumplimiento con las siguientes normativas panameñas:</p>
+                <ul class="list-disc list-inside text-gray-600 leading-relaxed space-y-2">
+                    <li><span class="font-semibold">Código Sanitario (Ley 66 de 1947):</span> Asegurar que todos los productores afiliados cumplan con las normas de higiene y manipulación de alimentos.</li>
+                    <li><span class="font-semibold">Registro Sanitario de Alimentos:</span> Orientar a los productores en la obtención de los registros necesarios para la comercialización formal de sus productos.</li>
+                    <li><span class="font-semibold">Ley de Comercio Electrónico (Ley 51 de 2008):</span> Regula la validez de los documentos y firmas electrónicas, protegiendo las transacciones en la plataforma.</li>
+                    <li><span class="font-semibold">Protección al Consumidor (ACODECO):</span> Garantizar la transparencia en precios, descripciones de productos y políticas de devolución.</li>
+                    <li><span class="font-semibold">Código de Trabajo:</span> Regular la relación laboral con el personal de logística y operaciones.</li>
+                </ul>
+            </section>
+
+            <!-- Módulo 7: Metodología de Validación -->
+            <section class="bg-white p-7 rounded-xl shadow-lg border-t-8 border-indigo-500 hover:shadow-xl transition duration-300 ease-in-out">
+                <h2 class="text-3xl font-bold mb-4 section-title">Metodología de Validación</h2>
+                <span class="status-badge status-planificado">Estado: Planificado</span>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-indigo-700">Investigación de Mercado Primaria:</h3>
+                <ul class="list-disc list-inside text-gray-600 leading-relaxed space-y-2">
+                    <li><span class="font-semibold">Encuestas a Consumidores:</span> Realizar encuestas digitales a 500 personas en zonas urbanas para validar el interés, la disposición a pagar, y los productos más deseados (Ej: ¿Qué dulce del interior más extraña? ¿Compraría pan de La Arena en una app?).</li>
+                    <li><span class="font-semibold">Entrevistas a Productores:</span> Sostener entrevistas en profundidad con al menos 15 productores en el interior para entender sus necesidades, capacidad de producción y barreras actuales.</li>
+                </ul>
+                <h3 class="text-xl font-semibold mt-5 mb-2 text-indigo-700">Producto Mínimo Viable (MVP):</h3>
+                <p class="text-gray-600 leading-relaxed">Lanzar una versión piloto del proyecto a través de un grupo de WhatsApp o Instagram con 5 productores y 100 clientes "beta" para validar el proceso logístico y la aceptación del servicio antes del desarrollo completo de la app.</p>
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="bg-gray-800 text-white text-center p-8 rounded-xl shadow-inner mt-10">
+            <p class="text-lg">&copy; 2025 Proyecto Sabor Interiorano. Todos los derechos reservados.</p>
+            <p class="text-base mt-3 opacity-80">Desarrollado con pasión por la cultura culinaria de Panamá.</p>
+        </footer>
+    </div>
+</body>
+</html>
